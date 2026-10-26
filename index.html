@@ -42,6 +42,7 @@ ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-directio
 ol.steps > li { counter-increment: s; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 16px 16px 16px 60px; position: relative; display: flex; flex-direction: column; gap: 6px; }
 ol.steps > li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--uv); color: var(--bg); font-family: var(--display); font-style: italic; font-weight: 800; font-size: 20px; display: grid; place-items: center; }
 ol.steps p, ul p { color: var(--muted); font-size: 15px; }
+code { font-size: 12.5px; background: #1F1C2A; border: 1px solid var(--line); border-radius: 6px; padding: 1px 5px; word-break: break-all; }
 .path { font-weight: 800; color: var(--fg); }
 .note { border-left: 3px solid var(--ice); padding: 4px 0 4px 14px; color: var(--muted); font-size: 15px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
@@ -73,6 +74,7 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
       <div class="card"><h3>Un iPhone à jour</h3><p>L'app n'existe pas encore sur Android.</p></div>
       <div class="card"><h3>Ton invitation</h3><p>Un e-mail ou un lien TestFlight, et un <b>code d'invitation</b> personnel : Benjamin te les envoie.</p></div>
       <div class="card"><h3>Ta montre (facultatif)</h3><p>Garmin (par Intervals.icu) ou Apple Watch. Sans montre, l'app marche aussi.</p></div>
+      <div class="card"><h3>Un compte GitHub</h3><p>Gratuit, pour envoyer tes retours (bugs, idées) depuis l'app. Voir « Faire des retours » plus bas.</p></div>
     </div>
   </section>
 
@@ -88,17 +90,18 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
         <p>Ouvre l'e-mail ou le lien d'invitation <b>depuis ton iPhone</b>, puis touche « Accepter » et « Installer » dans TestFlight. Coacher apparaît sur ton écran d'accueil.</p>
       </li>
       <li>
-        <h3>Fais connaissance avec ton coach</h3>
-        <p>Au premier lancement, l'app te pose ses questions : tes sports, ton objectif (une course, un temps, une date), tes disponibilités, ta montre. Tu peux répondre à la voix. Compte cinq minutes.</p>
+        <h3>Indique ton matériel</h3>
+        <p>Au premier lancement, l'app demande ta montre et ta balance : elle en déduit ce qu'il faut brancher à l'étape suivante.</p>
       </li>
       <li>
-        <h3>Entre ton code d'invitation</h3>
-        <p><span class="path">Moi → Connexions</span>, puis saisis le code que Benjamin t'a donné. C'est lui qui active le coach : sans code, pas d'IA.</p>
-      </li>
-      <li>
-        <h3>Branche ta montre</h3>
-        <p><b>Garmin</b> : crée un compte gratuit sur <a href="https://intervals.icu">intervals.icu</a> et relie-le à Garmin Connect (dans Intervals : Paramètres → Connexions). Puis, dans Coacher : <span class="path">Moi → Connexions → Intervals.icu → Connecter</span>, et autorise.</p>
+        <h3>Entre ton code d'invitation (écran « Connexions »)</h3>
+        <p>Saisis le code que Benjamin t'a donné. Il active tout de suite le coach <b>et</b> la dictée : la suite de l'accueil (raconter au coach qui tu es, à la voix) fonctionne dès cet instant. Sans code, l'accueil ne peut pas continuer.</p>
+        <p><b>Montre Garmin</b> : sur le même écran, touche <span class="path">Intervals.icu → Connecter</span> et autorise. Il te faut un compte gratuit sur <a href="https://intervals.icu">intervals.icu</a>, relié à Garmin Connect (dans Intervals : Paramètres → Connexions).</p>
         <p><b>Apple Watch</b> : accepte les autorisations Apple Santé quand l'app les demande. Tes séances arrivent dans l'app Exercice de la montre (watchOS 10 ou plus).</p>
+      </li>
+      <li>
+        <h3>Fais connaissance avec ton coach</h3>
+        <p>Raconte-lui, à la voix ou par écrit : tes sports, ton objectif (une course, un temps, une date), tes disponibilités. Il remplit les écrans suivants ; tu vérifies. Compte cinq minutes.</p>
       </li>
       <li>
         <h3>C'est parti</h3>
@@ -114,6 +117,42 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
       <div class="card"><span class="tag">Nutrition</span><p>Appui long sur le bouton <b>+</b> : dis ce que tu as mangé. Tu peux donner ta recette et la part mangée (« un quart de ma quiche »). Corrige à la voix : « plutôt 150 g de riz ».</p></div>
       <div class="card"><span class="tag">Poids</span><p>Balance Withings, Apple Santé, ou à la main dans Progrès. Une pesée par semaine, le matin à jeun, suffit.</p></div>
     </div>
+  </section>
+
+  <section>
+    <h2>Une balance Withings ?</h2>
+    <p class="note">La connexion Withings d'un toucher n'est pas encore ouverte. Deux façons de faire en attendant :</p>
+    <ol class="steps">
+      <li>
+        <h3>Le plus simple : par Apple Santé (2 minutes)</h3>
+        <p>Dans l'app <b>Withings</b> : Profil → Paramètres → Applications partenaires (ou « Santé ») → <b>Apple Santé</b>, et autorise le poids. Dans Coacher, choisis « <b>Balance reliée à Apple Santé</b> » comme balance (Moi → Connexions). Tes pesées arrivent toutes seules.</p>
+      </li>
+      <li>
+        <h3>Connexion directe, avec une clé (avancé)</h3>
+        <p>1. Sur <a href="https://developer.withings.com">developer.withings.com</a>, crée un compte puis une application « Public API integration » ; adresse de retour (callback) : <code>https://coacher-passerelle.benjaminmoreau44700.workers.dev/oauth/withings/callback</code>.</p>
+        <p>2. Note le <b>client ID</b> et le <b>client secret</b> ; obtiens un <b>access token</b> et un <b>refresh token</b> avec l'outil de test de leur portail (ou demande à Benjamin de t'aider).</p>
+        <p>3. Dans Coacher : <span class="path">Moi → Connexions → Avancé</span>, colle les quatre valeurs dans les champs Withings. L'app renouvelle ensuite le jeton toute seule.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Faire des retours</h2>
+    <p class="lead">Un bug, une idée, un écran pas clair : chaque retour fait avancer l'app.</p>
+    <ol class="steps">
+      <li>
+        <h3>Crée un compte GitHub</h3>
+        <p>Gratuit : <a href="https://github.com/signup">github.com/signup</a>. Choisis un pseudo et active l'application GitHub sur ton iPhone si tu veux (facultatif).</p>
+      </li>
+      <li>
+        <h3>Envoie ton pseudo à Benjamin</h3>
+        <p>Il t'invite au projet. Tu reçois un e-mail de GitHub (« benjaminmorea invited you ») : touche <b>Accepter l'invitation</b>.</p>
+      </li>
+      <li>
+        <h3>Depuis l'app : Moi → Signaler un problème</h3>
+        <p>Le formulaire s'ouvre, la version de l'app et ton iPhone sont déjà remplis. Décris ce que tu faisais, ce que tu attendais, ce qui s'est passé ; une capture aide beaucoup. Tu suis ensuite la réponse sur GitHub.</p>
+      </li>
+    </ol>
   </section>
 
   <section>
