@@ -115,44 +115,51 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
     <div class="cards">
       <div class="card"><span class="tag">Coach</span><p>Parle-lui comme à un coach : « décale le fractionné à samedi », « j'ai mal au mollet », « 72,4 ce matin ». Les gestes simples sont faits tout de suite, avec « Annuler ».</p></div>
       <div class="card"><span class="tag">Nutrition</span><p>Appui long sur le bouton <b>+</b> : dis ce que tu as mangé. Tu peux donner ta recette et la part mangée (« un quart de ma quiche »). Corrige à la voix : « plutôt 150 g de riz ».</p></div>
-      <div class="card"><span class="tag">Poids</span><p>Balance Withings, Apple Santé, ou à la main dans Progrès. Une pesée par semaine, le matin à jeun, suffit.</p></div>
+      <div class="card"><span class="tag">Poids</span><p>Balance reliée à Apple Santé (Withings comprise), ou à la main dans Progrès. Une pesée par semaine, le matin à jeun, suffit.</p></div>
     </div>
   </section>
 
   <section>
     <h2>Une balance Withings ?</h2>
-    <p class="note">La connexion Withings d'un toucher n'est pas encore ouverte. Deux façons de faire en attendant :</p>
+    <p class="note">Coacher lit tes pesées Withings par Apple Santé : rien à brancher dans Coacher, aucune clé.</p>
     <ol class="steps">
       <li>
-        <h3>Le plus simple : par Apple Santé (2 minutes)</h3>
-        <p>Dans l'app <b>Withings</b> : Profil → Paramètres → Applications partenaires (ou « Santé ») → <b>Apple Santé</b>, et autorise le poids. Dans Coacher, choisis « <b>Balance reliée à Apple Santé</b> » comme balance (Moi → Connexions). Tes pesées arrivent toutes seules.</p>
+        <h3>Dans l'app Withings</h3>
+        <p>Profil → Paramètres → Applications partenaires (ou « Santé ») → <b>Apple Santé</b> : active le partage, et autorise au moins le <b>poids</b>.</p>
       </li>
       <li>
-        <h3>Connexion directe, avec une clé (avancé)</h3>
-        <p>1. Sur <a href="https://developer.withings.com">developer.withings.com</a>, crée un compte puis une application « Public API integration » ; adresse de retour (callback) : <code>https://coacher-passerelle.benjaminmoreau44700.workers.dev/oauth/withings/callback</code>.</p>
-        <p>2. Note le <b>client ID</b> et le <b>client secret</b> ; obtiens un <b>access token</b> et un <b>refresh token</b> avec l'outil de test de leur portail (ou demande à Benjamin de t'aider).</p>
-        <p>3. Dans Coacher : <span class="path">Moi → Connexions → Avancé</span>, colle les quatre valeurs dans les champs Withings. L'app renouvelle ensuite le jeton toute seule.</p>
+        <h3>Dans Coacher</h3>
+        <p>Choisis « <b>Balance reliée à Apple Santé</b> » comme balance (à l'accueil, ou plus tard dans <span class="path">Moi → Connexions</span>) et accepte l'accès à Apple Santé.</p>
+      </li>
+      <li>
+        <h3>Vérifie</h3>
+        <p>Pèse-toi : la pesée apparaît dans Apple Santé, puis dans Coacher (onglet Progrès) à la prochaine ouverture.</p>
       </li>
     </ol>
   </section>
 
   <section>
     <h2>Faire des retours</h2>
-    <p class="lead">Un bug, une idée, un écran pas clair : chaque retour fait avancer l'app.</p>
+    <p class="lead">Un bug, une idée, un écran pas clair : tes retours arrivent directement dans le projet, sur GitHub.</p>
     <ol class="steps">
       <li>
-        <h3>Crée un compte GitHub</h3>
-        <p>Gratuit : <a href="https://github.com/signup">github.com/signup</a>. Choisis un pseudo et active l'application GitHub sur ton iPhone si tu veux (facultatif).</p>
+        <h3>Crée un compte GitHub (gratuit)</h3>
+        <p>Sur <a href="https://github.com/signup">github.com/signup</a> : ton e-mail, un mot de passe, puis un <b>nom d'utilisateur</b> (ton pseudo, par exemple <code>marie-dupont</code>). Confirme ton e-mail avec le code reçu.</p>
       </li>
       <li>
-        <h3>Envoie ton pseudo à Benjamin</h3>
-        <p>Il t'invite au projet. Tu reçois un e-mail de GitHub (« benjaminmorea invited you ») : touche <b>Accepter l'invitation</b>.</p>
+        <h3>Envoie ton nom d'utilisateur à Benjamin</h3>
+        <p>Par message : seulement le <b>nom d'utilisateur</b> (il s'affiche en haut à droite de GitHub, sous ta photo). <b>Jamais ton mot de passe</b> : personne n'en a besoin.</p>
+      </li>
+      <li>
+        <h3>Accepte l'invitation</h3>
+        <p>Benjamin t'invite au projet. Tu reçois un e-mail de GitHub « <i>benjaminmorea invited you to collaborate</i> » : touche <b>View invitation</b> puis <b>Accept invitation</b> (ou va sur <a href="https://github.com/notifications">github.com/notifications</a>). L'invitation expire au bout de 7 jours : redemande-la si besoin.</p>
       </li>
       <li>
         <h3>Depuis l'app : Moi → Signaler un problème</h3>
-        <p>Le formulaire s'ouvre, la version de l'app et ton iPhone sont déjà remplis. Décris ce que tu faisais, ce que tu attendais, ce qui s'est passé ; une capture aide beaucoup. Tu suis ensuite la réponse sur GitHub.</p>
+        <p>Connecte-toi à GitHub la première fois. Le formulaire s'ouvre avec la version de l'app et ton iPhone déjà remplis : décris ce que tu faisais, ce que tu attendais, ce qui s'est passé ; une capture aide beaucoup. Tu suis ensuite la réponse sur GitHub (et par e-mail).</p>
       </li>
     </ol>
+    <p class="note">Le projet est privé : tu y vois le code de l'app. Merci de le garder pour toi.</p>
   </section>
 
   <section>
