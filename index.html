@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rejoindre Coacher</title>
+<meta name="description" content="Comment installer Coacher et rejoindre le groupe de test : TestFlight, code d'invitation, montre.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Manrope:wght@400;600;800&display=swap">
+<style>
+/* Page d'invitation, publique : une colonne qui se lit au téléphone, les étapes numérotées (c'est un vrai ordre).
+   Aux couleurs de l'app (Ultraviolet), toujours sombre. Source : dépôt prepa, docs/rejoindre/index.html. */
+:root {
+  --bg: #0B0A10;
+  --panel: #15131D;
+  --line: rgba(255,255,255,0.10);
+  --fg: #F3F1F8;
+  --muted: #A9A5B8;
+  --faint: #6F6B7E;
+  --uv: #A48BFF;
+  --ice: #5EE6F0;
+  --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --body: 'Manrope', -apple-system, system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: max(32px, env(safe-area-inset-top)) 64px; padding-left: max(18px, env(safe-area-inset-left)); padding-right: max(18px, env(safe-area-inset-right)); display: flex; flex-direction: column; gap: 36px; }
+header { display: flex; flex-direction: column; gap: 14px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand svg { width: 52px; height: 52px; flex: none; }
+.brand b { font-family: var(--display); font-style: italic; font-weight: 800; font-size: 30px; letter-spacing: .02em; }
+h1 { font-family: var(--display); font-style: italic; font-weight: 800; font-size: clamp(40px, 10vw, 60px); line-height: .95; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-style: italic; font-weight: 800; font-size: 30px; line-height: 1; margin: 0; }
+h3 { font-size: 17px; margin: 0; }
+p { margin: 0; }
+.lead { color: var(--muted); font-size: 17px; }
+a { color: var(--ice); }
+section { display: flex; flex-direction: column; gap: 14px; }
+ol.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; counter-reset: s; }
+ol.steps > li { counter-increment: s; background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 16px 16px 16px 60px; position: relative; display: flex; flex-direction: column; gap: 6px; }
+ol.steps > li::before { content: counter(s); position: absolute; left: 16px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--uv); color: var(--bg); font-family: var(--display); font-style: italic; font-weight: 800; font-size: 20px; display: grid; place-items: center; }
+ol.steps p, ul p { color: var(--muted); font-size: 15px; }
+.path { font-weight: 800; color: var(--fg); }
+.note { border-left: 3px solid var(--ice); padding: 4px 0 4px 14px; color: var(--muted); font-size: 15px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.card p { color: var(--muted); font-size: 14.5px; }
+.tag { align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: rgba(164,139,255,.18); color: var(--uv); }
+details { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; font-weight: 800; }
+details p { color: var(--muted); font-size: 15px; margin-top: 8px; }
+footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: column; gap: 6px; }
+:focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0B0A10" stroke="rgba(255,255,255,.12)"/><path d="M10 48C18 48 20 36 27 36S34 42 38 38S44 22 49 18" fill="none" stroke="#A48BFF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M49 18V9L57 12L49 15Z" fill="#5EE6F0" stroke="#5EE6F0" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      <b>COACHER</b>
+    </div>
+    <h1>Rejoindre Coacher</h1>
+    <p class="lead">Coacher est un coach d'endurance sur iPhone : course, vélo, renfo, natation, nutrition. Il écrit ton plan jusqu'à ton objectif, l'adapte chaque semaine et envoie les séances sur ta montre. L'app est en test : voici comment la rejoindre, en dix minutes.</p>
+  </header>
+
+  <section>
+    <h2>Ce qu'il te faut</h2>
+    <div class="cards">
+      <div class="card"><h3>Un iPhone à jour</h3><p>L'app n'existe pas encore sur Android.</p></div>
+      <div class="card"><h3>Ton invitation</h3><p>Un e-mail ou un lien TestFlight, et un <b>code d'invitation</b> personnel : Benjamin te les envoie.</p></div>
+      <div class="card"><h3>Ta montre (facultatif)</h3><p>Garmin (par Intervals.icu) ou Apple Watch. Sans montre, l'app marche aussi.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Les étapes</h2>
+    <ol class="steps">
+      <li>
+        <h3>Installe TestFlight</h3>
+        <p>L'app gratuite d'Apple pour les apps en test : <a href="https://apps.apple.com/app/testflight/id899247664">TestFlight sur l'App Store</a>.</p>
+      </li>
+      <li>
+        <h3>Accepte l'invitation et installe Coacher</h3>
+        <p>Ouvre l'e-mail ou le lien d'invitation <b>depuis ton iPhone</b>, puis touche « Accepter » et « Installer » dans TestFlight. Coacher apparaît sur ton écran d'accueil.</p>
+      </li>
+      <li>
+        <h3>Fais connaissance avec ton coach</h3>
+        <p>Au premier lancement, l'app te pose ses questions : tes sports, ton objectif (une course, un temps, une date), tes disponibilités, ta montre. Tu peux répondre à la voix. Compte cinq minutes.</p>
+      </li>
+      <li>
+        <h3>Entre ton code d'invitation</h3>
+        <p><span class="path">Moi → Connexions</span>, puis saisis le code que Benjamin t'a donné. C'est lui qui active le coach : sans code, pas d'IA.</p>
+      </li>
+      <li>
+        <h3>Branche ta montre</h3>
+        <p><b>Garmin</b> : crée un compte gratuit sur <a href="https://intervals.icu">intervals.icu</a> et relie-le à Garmin Connect (dans Intervals : Paramètres → Connexions). Puis, dans Coacher : <span class="path">Moi → Connexions → Intervals.icu → Connecter</span>, et autorise.</p>
+        <p><b>Apple Watch</b> : accepte les autorisations Apple Santé quand l'app les demande. Tes séances arrivent dans l'app Exercice de la montre (watchOS 10 ou plus).</p>
+      </li>
+      <li>
+        <h3>C'est parti</h3>
+        <p>Ta semaine apparaît dans <b>Aujourd'hui</b> et <b>Ma route</b>. Après chaque séance, note ton ressenti : le coach ajuste la semaine suivante.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Les bons réflexes</h2>
+    <div class="cards">
+      <div class="card"><span class="tag">Coach</span><p>Parle-lui comme à un coach : « décale le fractionné à samedi », « j'ai mal au mollet », « 72,4 ce matin ». Les gestes simples sont faits tout de suite, avec « Annuler ».</p></div>
+      <div class="card"><span class="tag">Nutrition</span><p>Appui long sur le bouton <b>+</b> : dis ce que tu as mangé. Tu peux donner ta recette et la part mangée (« un quart de ma quiche »). Corrige à la voix : « plutôt 150 g de riz ».</p></div>
+      <div class="card"><span class="tag">Poids</span><p>Balance Withings, Apple Santé, ou à la main dans Progrès. Une pesée par semaine, le matin à jeun, suffit.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details><summary>Est-ce payant ?</summary><p>Non, pas pendant le test. Chaque participant a un petit budget d'IA par mois : s'il est atteint, le coach se met en pause jusqu'au 1er du mois suivant, le reste de l'app continue.</p></details>
+    <details><summary>Où vont mes données ?</summary><p>Elles restent sur ton iPhone. Le serveur de Coacher ne garde qu'un identifiant aléatoire et le coût d'IA du mois. Les détails : <a href="https://coacher-passerelle.benjaminmoreau44700.workers.dev/privacy">politique de confidentialité</a>.</p></details>
+    <details><summary>Je change de téléphone</summary><p>La sauvegarde iCloud de l'iPhone emporte les données de l'app. Sinon : <span class="path">Moi → Exporter mes données</span> sur l'ancien, puis « Restaurer depuis un export » (Moi → Avancé) sur le nouveau.</p></details>
+    <details><summary>L'app a expiré ou ne s'ouvre plus</summary><p>Une version de test dure 90 jours. Ouvre TestFlight et installe la dernière version : TestFlight te prévient à chaque nouveauté.</p></details>
+    <details><summary>Un bug, une idée ?</summary><p><span class="path">Moi → Signaler un problème</span> : la version et l'écran sont joints tout seuls.</p></details>
+  </section>
+
+  <footer>
+    <p>Coacher, application en test privé. Les codes d'invitation sont personnels : ne les partage pas.</p>
+    <p>Valeurs nutritionnelles : table Ciqual 2025, Anses (Licence Ouverte).</p>
+  </footer>
+</div>
+</body>
+</html>
