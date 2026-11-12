@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-12",
+  "items": [
+    {
+      "id": "2025-frandsen-session-spike",
+      "added": "2026-11",
+      "topics": ["run", "recovery"],
+      "title": "Une seule sortie trop longue suffit à augmenter le risque de blessure",
+      "takeaway": "Chez 5 200 coureurs suivis 18 mois, le risque de blessure de surcharge monte dès qu'une sortie dépasse de plus de 10 % la plus longue des 30 derniers jours ; la progression hebdomadaire seule ne le prédit pas. Faire grandir la sortie longue par petits pas.",
+      "evidence": "cohorte",
+      "source": "British Journal of Sports Medicine, 2025",
+      "url": "https://pure.au.dk/portal/en/publications/how-much-running-is-too-much-identifying-high-risk-running-sessio/"
+    },
+    {
+      "id": "2021-smyth-taper",
+      "added": "2026-11",
+      "topics": ["run"],
+      "title": "Un affûtage long et strict va avec de meilleurs marathons chez l'amateur",
+      "takeaway": "Sur 158 000 marathoniens amateurs, un affûtage strict de trois semaines (volume qui baisse chaque semaine, sans rechute) est associé à un temps 2,6 % meilleur qu'un affûtage minimal. Deux coureurs sur trois cassent leur affûtage par une semaine de reprise de volume.",
+      "evidence": "cohorte",
+      "source": "Frontiers in Sports and Active Living, 2021",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8506252"
+    },
+    {
+      "id": "2007-bosquet-taper",
+      "added": "2026-11",
+      "topics": ["run", "ride", "swim"],
+      "title": "L'affûtage qui marche : deux semaines, moitié moins de volume, la même intensité",
+      "takeaway": "La méta-analyse de référence donne le meilleur effet pour un affûtage de deux semaines où le volume baisse de 41 à 60 %, sans toucher ni à l'intensité ni à la fréquence des séances.",
+      "evidence": "meta-analyse",
+      "source": "Medicine & Science in Sports & Exercise, 2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17762369/"
+    },
+    {
+      "id": "2024-llanos-lagos-strength-economy",
+      "added": "2026-11",
+      "topics": ["run", "strength"],
+      "title": "Charges lourdes et pliométrie améliorent l'économie de course",
+      "takeaway": "La musculation lourde (80 % du maximum et plus) et la pliométrie améliorent l'économie de course des coureurs de demi-fond et de fond ; les charges légères et l'isométrie beaucoup moins. Deux séances par semaine suffisent.",
+      "evidence": "meta-analyse",
+      "source": "Sports Medicine, 2024",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11052887"
+    },
+    {
+      "id": "2020-fokkema-volume-half",
+      "added": "2026-11",
+      "topics": ["run"],
+      "title": "Sur semi et marathon, le volume et la sortie longue font le chrono",
+      "takeaway": "Chez l'amateur, plus de 32 km par semaine et une sortie longue de plus de 21 km vont avec un semi plus rapide ; sur marathon, moins de 40 km par semaine va avec des temps plus lents. Aucun lien net avec les blessures.",
+      "evidence": "cohorte",
+      "source": "Scandinavian Journal of Medicine & Science in Sports, 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7496388"
+    },
+    {
+      "id": "2014-jeukendrup-carbs",
+      "added": "2026-11",
+      "topics": ["nutrition", "run", "ride"],
+      "title": "Glucides à l'effort : la dose dépend de la durée",
+      "takeaway": "Jusqu'à 60 g de glucides par heure pour un effort de 2 à 3 h, environ 90 g par heure au-delà, en mélangeant glucose et fructose ; à ajuster à la baisse quand l'intensité est faible.",
+      "evidence": "revue",
+      "source": "Sports Medicine, 2014",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24791914/"
+    },
+    {
+      "id": "2023-gut-training-review",
+      "added": "2026-11",
+      "topics": ["nutrition", "run"],
+      "title": "L'intestin s'entraîne",
+      "takeaway": "Deux semaines à répéter le ravitaillement de course à l'entraînement réduisent l'inconfort digestif d'environ 47 % : chaque sortie longue du bloc spécifique doit porter le protocole du jour J.",
+      "evidence": "revue",
+      "source": "Sports Medicine, 2023",
+      "url": "https://link.springer.com/article/10.1007/s40279-023-01841-0"
+    },
+    {
+      "id": "2025-brandt-hyrox",
+      "added": "2026-11",
+      "topics": ["hyrox"],
+      "title": "Hyrox : la course occupe plus de la moitié de l'épreuve",
+      "takeaway": "Première étude de physiologie sur un Hyrox simulé : 51 min de course pour 33 min de stations, fréquence cardiaque et lactate au plus haut sur les wall balls. L'endurance prime ; les besoins en force maximale sont modérés.",
+      "evidence": "essai",
+      "source": "Frontiers in Physiology, 2025",
+      "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2025.1519240/full"
+    },
+    {
+      "id": "2024-pelland-volume",
+      "added": "2026-11",
+      "topics": ["strength"],
+      "title": "Musculation : le volume paie, avec des rendements décroissants",
+      "takeaway": "Sur 67 études, la masse et la force augmentent avec le nombre de séries hebdomadaires, mais de moins en moins vite, surtout pour la force ; à volume égal, la fréquence compte peu.",
+      "evidence": "meta-analyse",
+      "source": "SportRxiv (prépublication), 2024",
+      "url": "https://sportrxiv.org/index.php/server/preprint/view/460"
+    }
+  ]
+}
