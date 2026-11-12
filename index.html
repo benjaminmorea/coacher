@@ -73,7 +73,7 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
     <div class="cards">
       <div class="card"><h3>Un iPhone à jour</h3><p>L'app n'existe pas encore sur Android.</p></div>
       <div class="card"><h3>Ton invitation</h3><p>Un e-mail ou un lien TestFlight, et un <b>code d'invitation</b> personnel : Benjamin te les envoie.</p></div>
-      <div class="card"><h3>Ta montre (facultatif)</h3><p>Garmin (par Intervals.icu) ou Apple Watch. Sans montre, l'app marche aussi.</p></div>
+      <div class="card"><h3>Ta montre (facultatif)</h3><p>Garmin, Coros, Suunto, Polar, Wahoo (par Intervals.icu) ou Apple Watch (par Apple Santé). Sans montre, l'app marche aussi.</p></div>
       <div class="card"><h3>Un compte GitHub</h3><p>Gratuit, pour envoyer tes retours (bugs, idées) depuis l'app. Voir « Faire des retours » plus bas.</p></div>
     </div>
   </section>
@@ -96,8 +96,7 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
       <li>
         <h3>Entre ton code d'invitation (écran « Connexions »)</h3>
         <p>Saisis le code que Benjamin t'a donné. Il active tout de suite le coach <b>et</b> la dictée : la suite de l'accueil (raconter au coach qui tu es, à la voix) fonctionne dès cet instant. Sans code, l'accueil ne peut pas continuer.</p>
-        <p><b>Montre Garmin</b> : sur le même écran, touche <span class="path">Intervals.icu → Connecter</span> et autorise. Il te faut un compte gratuit sur <a href="https://intervals.icu">intervals.icu</a>, relié à Garmin Connect (dans Intervals : Paramètres → Connexions).</p>
-        <p><b>Apple Watch</b> : accepte les autorisations Apple Santé quand l'app les demande. Tes séances arrivent dans l'app Exercice de la montre (watchOS 10 ou plus).</p>
+        <p><b>Montre Garmin, Coros…</b> : sur le même écran, touche <span class="path">Intervals.icu → Connecter</span> et autorise. <b>Apple Watch ou balance connectée</b> : accepte l'accès à Apple Santé. Le détail, et le pourquoi, est plus bas dans « <a href="#materiel">Brancher ta montre et ta balance</a> ».</p>
       </li>
       <li>
         <h3>Fais connaissance avec ton coach</h3>
@@ -119,21 +118,63 @@ footer { color: var(--faint); font-size: 13px; display: flex; flex-direction: co
     </div>
   </section>
 
-  <section>
-    <h2>Une balance Withings ?</h2>
-    <p class="note">Coacher lit tes pesées Withings par Apple Santé : rien à brancher dans Coacher, aucune clé.</p>
+  <section id="materiel">
+    <h2>Brancher ta montre et ta balance</h2>
+    <p class="lead">Coacher ne parle jamais directement à ta montre ni à ta balance : il passe par un intermédiaire, Intervals.icu ou Apple Santé. Voici lequel, pourquoi, et comment le régler une fois pour toutes.</p>
+
+    <h3>Garmin, Coros, Suunto, Polar, Wahoo : par Intervals.icu</h3>
+    <p class="note"><b>Pourquoi ?</b> Les marques de montres n'ouvrent l'écriture sur leurs montres qu'à des partenaires agréés. Coacher n'en est pas un ; <a href="https://intervals.icu">Intervals.icu</a> l'est, et il est gratuit. Il sert de pont dans les deux sens : Coacher y dépose tes séances (allures, fréquence cardiaque ou puissance, étape par étape), ta montre les récupère ; tes sorties terminées remontent par le même chemin, et le coach ajuste la suite.</p>
     <ol class="steps">
       <li>
-        <h3>Dans l'app Withings</h3>
-        <p>Profil → Paramètres → Applications partenaires (ou « Santé ») → <b>Apple Santé</b> : active le partage, et autorise au moins le <b>poids</b>.</p>
+        <h3>Crée ton compte Intervals.icu</h3>
+        <p>Sur <a href="https://intervals.icu">intervals.icu</a>, gratuit. Tu n'auras presque jamais à y retourner.</p>
+      </li>
+      <li>
+        <h3>Relie-le à ta montre</h3>
+        <p>Dans Intervals : <span class="path">Paramètres → Connexions</span>, connecte ton compte de marque (Garmin Connect, Coros, Suunto, Polar, Wahoo). Pour Garmin, coche l'envoi des entraînements prévus (<i>upload planned workouts</i>) : c'est ce qui fait arriver les séances sur la montre.</p>
+      </li>
+      <li>
+        <h3>Branche-le à Coacher</h3>
+        <p>Dans Coacher : <span class="path">Moi → Connexions → Connecter Intervals.icu</span>, puis autorise. Rien à copier.</p>
+      </li>
+      <li>
+        <h3>Sur la montre</h3>
+        <p>Synchronise ta montre (l'app de la marque ouverte sur l'iPhone suffit) : la séance du jour apparaît dans son calendrier d'entraînement ; lance-la, la montre te guide. Tes sorties terminées reviennent dans Coacher toutes seules.</p>
+      </li>
+    </ol>
+    <p class="note">Garmin et Wahoo reçoivent les séances sur la montre. Pour Coros, Suunto et Polar, Intervals lit toujours tes sorties ; l'arrivée des séances sur la montre dépend de ce que la marque accepte.</p>
+
+    <h3>Apple Watch : par Apple Santé</h3>
+    <p class="note"><b>Pourquoi ?</b> Sur iPhone, tout ce que mesure la montre (séances, fréquence cardiaque, pas) est rangé dans Apple Santé : Coacher le lit là, avec ta permission. Et Apple permet à une app de programmer des séances dans l'app <b>Exercice</b> de la montre : pas besoin d'Intervals.</p>
+    <ol class="steps">
+      <li>
+        <h3>Choisis « Apple Watch » comme montre</h3>
+        <p>À l'accueil, ou dans <span class="path">Moi → Connexions</span>.</p>
+      </li>
+      <li>
+        <h3>Accepte les deux autorisations</h3>
+        <p><b>Apple Santé</b> (lecture des séances, du cœur, des pas, du poids) et la <b>programmation d'exercices</b>. Si tu as refusé : Réglages de l'iPhone → Santé → Accès aux données → Coacher.</p>
+      </li>
+      <li>
+        <h3>Sur la montre</h3>
+        <p>Ouvre l'app Exercice : tes séances prévues y sont, prêtes à lancer (watchOS 10 ou plus). Une fois finies, elles reviennent dans Coacher par Santé.</p>
+      </li>
+    </ol>
+
+    <h3>Balance connectée : par Apple Santé</h3>
+    <p class="note"><b>Pourquoi ?</b> Chaque marque de balance a son app, mais presque toutes savent écrire le poids dans Apple Santé. Coacher lit Santé : une seule autorisation, quelle que soit ta balance, et aucune clé à donner.</p>
+    <ol class="steps">
+      <li>
+        <h3>Dans l'app de ta balance</h3>
+        <p>Active le partage vers <b>Apple Santé</b>, au moins pour le <b>poids</b>. Withings : Profil → Paramètres → Applications partenaires → Apple Santé. Renpho, Eufy, Xiaomi (Zepp Life)… : même idée, dans leurs réglages.</p>
       </li>
       <li>
         <h3>Dans Coacher</h3>
-        <p>Choisis « <b>Balance reliée à Apple Santé</b> » comme balance (à l'accueil, ou plus tard dans <span class="path">Moi → Connexions</span>) et accepte l'accès à Apple Santé.</p>
+        <p>Choisis « <b>Balance reliée à Apple Santé</b> » (à l'accueil, ou dans <span class="path">Moi → Connexions</span>) et accepte l'accès à Santé.</p>
       </li>
       <li>
         <h3>Vérifie</h3>
-        <p>Pèse-toi : la pesée apparaît dans Apple Santé, puis dans Coacher (onglet Progrès) à la prochaine ouverture.</p>
+        <p>Pèse-toi : la pesée apparaît dans Apple Santé, puis dans Coacher (onglet Progrès) à la prochaine ouverture. Pas de balance connectée ? Note ton poids dans Progrès, ou dis-le au coach (« 72,4 ce matin »).</p>
       </li>
     </ol>
   </section>
