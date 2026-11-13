@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-13",
+  "tips": [
+    {
+      "id": "debut-prepa-endurance",
+      "title": "Ton endurance se court lentement",
+      "teaser": "La moitié de tes progrès viendra des sorties où tu as l'impression de ne rien faire.",
+      "body": "Les footings et la sortie longue font l'essentiel de ta préparation : environ 80 % du temps. Ils construisent le moteur (cœur, capillaires, mitochondries) qui te permettra de tenir l'allure le jour J.\n\n**Le piège de l'amateur** : courir l'endurance trop vite. On rentre plus fatigué, la séance dure du surlendemain est ratée, et on ne progresse ni d'un côté ni de l'autre.\n\n**Le repère** : tu peux parler en phrases complètes. Si tu dois couper tes phrases, ralentis — même si l'allure te paraît ridicule. La montre te guide à la fréquence cardiaque : fais-lui confiance.",
+      "sports": ["run", "ride", "hyrox"],
+      "when": { "planWeek": [1, 2] },
+      "priority": 3
+    },
+    {
+      "id": "debut-prepa-ressenti",
+      "title": "Ton ressenti, c'est ce qui ajuste ton plan",
+      "teaser": "Trente secondes après chaque séance, et ta semaine suivante est faite pour toi.",
+      "body": "Après chaque séance, note ta difficulté (de 1 à 10) et un mot : « jambes lourdes », « facile », « mal dormi ». C'est ce que le coach lit avant d'écrire la semaine suivante.\n\nSans retour, il applique le plan tel quel. Avec, il allège quand tu es fatigué et pousse quand tu es frais. Une douleur ? Dis-le tout de suite au coach, il adapte sans attendre lundi.",
+      "sports": ["any"],
+      "when": { "planWeek": [1, 3] },
+      "priority": 3
+    },
+    {
+      "id": "sortie-longue-veille",
+      "title": "La veille d'une sortie longue",
+      "teaser": "Ce que tu manges ce soir compte plus que ce que tu emportes demain.",
+      "body": "- **Ce soir** : un plat de féculents (pâtes, riz, pommes de terre) et pas de repas trop gras ou trop riche en fibres.\n- **Demain matin** : un petit-déjeuner que tu connais, 1 h 30 à 2 h avant de partir.\n- **Pendant** : au-delà de 1 h 15, emporte de quoi boire et 30 à 60 g de glucides par heure (un gel, une compote, quelques pâtes de fruits).\n\nC'est aussi le moment de **tester ce que tu prendras le jour J** : l'intestin s'entraîne comme les jambes. Les sportifs qui répètent leur ravitaillement à l'entraînement ont nettement moins de troubles digestifs en course.",
+      "sports": ["run", "ride", "hyrox"],
+      "when": { "longTomorrow": true },
+      "priority": 2,
+      "source": { "label": "Sports Medicine, 2023 (entraînement de l'intestin)", "url": "https://link.springer.com/article/10.1007/s40279-023-01841-0" }
+    },
+    {
+      "id": "specifique-allure",
+      "title": "Le bloc spécifique : apprendre ton allure",
+      "teaser": "Ces semaines-ci, tu apprends à ton corps la vitesse exacte du jour J.",
+      "body": "Le bloc spécifique rapproche l'entraînement de la course : des blocs à ton allure cible, une sortie longue qui finit à cette allure, et le parcours qui ressemble à celui de l'épreuve (côtes, descentes, terrain).\n\n**Ce qui compte** : tenir l'allure prévue, pas plus vite. Courir ces blocs trop rapides, c'est s'entraîner pour une autre course, et arriver fatigué à l'affûtage.\n\nSi ta course a du dénivelé, les séances de côtes de ces semaines sont là pour ça : les descentes rythmées protègent aussi tes cuisses pour le jour J.",
+      "sports": ["run", "hyrox"],
+      "when": { "stage": ["specifique"] },
+      "priority": 2
+    },
+    {
+      "id": "affutage-pourquoi",
+      "title": "L'affûtage : moins, mais pas moins vite",
+      "teaser": "Tu vas avoir l'impression de perdre ta forme. C'est l'inverse.",
+      "body": "Les deux dernières semaines, ton volume baisse de 40 à 60 %, mais tu gardes un peu d'intensité : de courts rappels à ton allure de course. C'est ce que montrent les études : un affûtage de deux semaines, volume réduit, intensité gardée, donne le meilleur gain.\n\n**À quoi t'attendre** : des jambes parfois bizarres, l'envie d'en faire plus, un peu de poids en plus (de l'eau stockée avec les glucides). Tout est normal.\n\n**À éviter** : « rattraper » une séance manquée, ajouter une sortie longue « pour se rassurer ». Les deux tiers des coureurs cassent leur affûtage avec une semaine de reprise de volume ; ceux qui tiennent un affûtage strict courent plus vite.",
+      "sports": ["run", "ride", "hyrox", "swim"],
+      "when": { "daysToRace": [8, 16], "raceKm": [15, 400] },
+      "priority": 3,
+      "source": { "label": "Frontiers in Sports and Active Living, 2021", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8506252" }
+    },
+    {
+      "id": "semaine-course-courte",
+      "title": "La semaine de ta course",
+      "teaser": "Rien de nouveau, du sommeil, et quelques foulées rapides.",
+      "body": "- **Volume** : nettement en baisse, mais tu continues à courir — l'arrêt complet rend les jambes lourdes.\n- **Un rappel d'allure** trois ou quatre jours avant : quelques minutes à ton allure de course pour la mémoriser.\n- **Pas de muscu lourde** ni de séance à fond dans les derniers jours.\n- **Rien de nouveau** : chaussures, tenue, gels, petit-déjeuner, tout a déjà servi à l'entraînement.\n- **Le sommeil** des deux nuits avant compte plus que celui de la veille, souvent agitée : c'est normal.",
+      "sports": ["run", "hyrox"],
+      "when": { "daysToRace": [3, 7] },
+      "priority": 3
+    },
+    {
+      "id": "recharge-glucides",
+      "title": "La recharge en glucides, sans se gaver",
+      "teaser": "Pour un semi ou plus long : deux jours, des glucides à chaque repas.",
+      "body": "Pour une course de plus de 90 minutes, les deux jours d'avant :\n\n- **Des glucides à chaque repas** : riz blanc, pâtes, semoule, pain, pommes de terre, compotes.\n- **Moins de fibres et de gras** : les légumes crus, les légumineuses et les fritures attendront lundi.\n- **Bois régulièrement.**\n\nLa balance prend un kilo : c'est de l'eau stockée avec les glucides, c'est exactement le but. Inutile de manger deux fois plus : on déplace la part des glucides, on ne double pas l'assiette.\n\nPour un 5 ou un 10 km, un plat de féculents la veille suffit.",
+      "sports": ["run", "ride", "hyrox", "swim"],
+      "when": { "daysToRace": [1, 3], "raceKm": [18, 400] },
+      "priority": 3
+    },
+    {
+      "id": "veille-de-course",
+      "title": "La veille de ta course",
+      "teaser": "Prépare tout ce soir, pour n'avoir rien à décider demain.",
+      "body": "- **Ton sac** : dossard et épingles, puce, tenue testée, chaussures rodées, gels comptés, montre chargée, vêtement chaud jeté au départ.\n- **Le dîner** : un repas que tu connais, riche en féculents, pas trop tard, pas d'expérience.\n- **Le plan de course** : écris ton allure de départ, plus lente que la cible les deux premiers kilomètres, et tes prises de gels.\n- **Le réveil** : 3 h avant le départ pour le petit-déjeuner, et de quoi arriver 45 min avant.\n\nUne nuit courte la veille ne change presque rien : c'est le sommeil des jours d'avant qui compte. Ne t'inquiète pas si tu dors mal.",
+      "sports": ["run", "ride", "hyrox", "swim"],
+      "when": { "daysToRace": [1, 1] },
+      "priority": 3
+    },
+    {
+      "id": "jour-j-gestion",
+      "title": "Aujourd'hui, c'est ta course",
+      "teaser": "Le premier tiers se court avec la tête, le dernier avec le cœur.",
+      "body": "- **Petit-déjeuner** 3 h avant, celui que tu as testé.\n- **Échauffement** : 10 min de trot et quelques accélérations pour un 10 km ; quelques minutes suffisent pour un semi ou un marathon.\n- **Départ** : l'adrénaline fait partir trop vite. Les deux premiers kilomètres au-dessus de ta cible : tu les rattraperas sans t'en rendre compte.\n- **Ravitaillement** : suis ton plan dès le début, n'attends pas d'avoir faim ou soif.\n- **Le dernier tiers** : c'est là que ta préparation paie. Accroche-toi à quelqu'un qui court un peu plus vite.\n\nBonne course. Le coach t'attend pour le bilan.",
+      "sports": ["run", "hyrox"],
+      "when": { "daysToRace": [0, 0] },
+      "priority": 3
+    },
+    {
+      "id": "apres-course-recuperation",
+      "title": "Après la course : récupérer vraiment",
+      "teaser": "Ta prochaine progression commence par une semaine sans intensité.",
+      "body": "Une course à fond laisse des traces plus longtemps qu'on ne le sent : environ une semaine de récupération par tranche de 10 km courus à fond.\n\n- **Les premiers jours** : repos, marche, vélo très facile si tu en as envie.\n- **Puis** : des footings courts, sans montre si possible.\n- **Pas d'intensité** avant d'avoir retrouvé des jambes normales en descente d'escalier.\n- **Mange normalement** : ce n'est pas le moment de restreindre, tes réserves se reconstituent.\n\nPense au bilan avec le coach : ce que ta course dit de ta préparation est la meilleure base pour la suivante.",
+      "sports": ["run", "hyrox"],
+      "when": { "daysAfterRace": [0, 6] },
+      "priority": 3
+    },
+    {
+      "id": "apres-course-suite",
+      "title": "Choisir ton prochain objectif",
+      "teaser": "Le bon objectif est à 12 à 20 semaines, et un peu au-dessus de ce que tu crois possible.",
+      "body": "Quelques repères pour choisir la suite :\n\n- **Le délai** : 12 à 20 semaines pour un semi ou un marathon, 8 à 12 pour un 10 km. Moins, on brûle les étapes.\n- **La cible** : ton bilan te donne ton niveau réel. Un objectif 2 à 4 % plus rapide est ambitieux mais tenable.\n- **Une épreuve intermédiaire** quelques semaines avant (un 10 km avant un semi) : un test grandeur nature, et une motivation.\n- **Ou une période sans objectif** : quatre semaines de forme, de muscu, de plaisir. Ça compte aussi.\n\nAjoute-le dans Mes objectifs, ou dis-le au coach : il va chercher le parcours et écrit la route.",
+      "sports": ["any"],
+      "when": { "daysAfterRace": [5, 30] },
+      "priority": 2
+    },
+    {
+      "id": "renfo-coureur",
+      "title": "Pourquoi le renfo te fait courir plus vite",
+      "teaser": "Deux séances courtes par semaine, et ta foulée coûte moins cher.",
+      "body": "Les charges lourdes (des séries courtes, près de ton maximum) et la pliométrie (sauts, bonds) améliorent l'économie de course : à la même allure, tu dépenses moins. Les charges légères en séries longues font beaucoup moins.\n\n**En pratique** : deux séances de 30 à 45 min par semaine, loin de tes séances clés, en base et en construction. Squat, soulevé de terre, fentes, mollets, gainage, quelques sauts.\n\n**En affûtage** : on garde la charge et on divise le volume par deux, et plus rien dans les cinq derniers jours.",
+      "sports": ["run", "hyrox"],
+      "when": { "stage": ["base", "construction"] },
+      "priority": 1,
+      "source": { "label": "Sports Medicine, 2024", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11052887" }
+    },
+    {
+      "id": "semaine-allegee",
+      "title": "Ta semaine allégée n'est pas une semaine perdue",
+      "teaser": "C'est pendant la récupération que l'entraînement se transforme en progrès.",
+      "body": "Toutes les 3 à 4 semaines, le volume baisse de 30 à 40 %. C'est pendant ces jours que ton corps assimile le travail des semaines d'avant : sans eux, la fatigue s'accumule et la progression s'arrête.\n\n**Profites-en** pour dormir, faire un peu de mobilité, et arriver frais au test de fin d'étape s'il y en a un. L'envie d'en faire plus est le signe que ça marche.",
+      "sports": ["run", "ride", "hyrox", "strength"],
+      "when": { "stage": ["base", "construction", "specifique"] },
+      "priority": 1
+    },
+    {
+      "id": "trail-descentes",
+      "title": "Les descentes se préparent",
+      "teaser": "Ce sont elles, plus que les montées, qui cassent les cuisses en fin de course.",
+      "body": "En descente, les cuisses freinent : ce travail « excentrique » abîme le muscle bien plus que la montée. La bonne nouvelle : le muscle s'adapte vite, et quelques séances de descente le protègent pour plusieurs semaines.\n\n- **Une séance de descentes rythmées** par semaine dans le bloc spécifique, en courant détendu, le buste légèrement en avant.\n- **La dernière séance de descente appuyée** au plus tard deux semaines avant l'épreuve : les courbatures doivent avoir disparu.\n- **Les bâtons**, si l'épreuve les autorise, s'apprennent à l'entraînement.",
+      "sports": ["run"],
+      "when": { "stage": ["specifique"] },
+      "priority": 1
+    },
+    {
+      "id": "nuit-frontale",
+      "title": "Courir de nuit, ça s'apprend",
+      "teaser": "Si ton épreuve passe par la nuit, la frontale doit devenir une vieille amie.",
+      "body": "- **Trois sorties à la frontale** au moins dans les dernières semaines, dont une longue.\n- **Teste ta lampe** : autonomie réelle (souvent moitié moins que l'annonce par le froid), piles de rechange, lampe de secours.\n- **Le terrain technique de nuit** se court plus lentement : prévois-le dans ton plan de course.\n- **Le sommeil** : une épreuve qui commence le soir se prépare avec une sieste, et le ravitaillement doit tenir compte de l'heure.",
+      "sports": ["run", "ride"],
+      "when": { "stage": ["specifique"], "raceKm": [40, 400] },
+      "priority": 1
+    },
+    {
+      "id": "hyrox-compromised",
+      "title": "Hyrox : courir sur des jambes lourdes",
+      "teaser": "La course fait plus de la moitié de ton temps. Elle se court juste après une station.",
+      "body": "La première étude sur le Hyrox l'a mesuré : environ 50 minutes de course pour 30 de stations chez des amateurs. Le socle, c'est donc l'endurance de course.\n\n**La séance clé** enchaîne 1 km de course et une station, plusieurs fois. Elle apprend à relancer l'allure quand les jambes sortent des fentes ou des traîneaux.\n\n**Les stations** se travaillent à la charge de course, en séries longues, pas en force maximale. Les wall balls en fin d'épreuve sont là où le cœur monte le plus haut : garde de la marge.",
+      "sports": ["hyrox"],
+      "when": { "stage": ["construction", "specifique"] },
+      "priority": 2,
+      "source": { "label": "Frontiers in Physiology, 2025", "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2025.1519240/full" }
+    },
+    {
+      "id": "velo-ravitaillement",
+      "title": "À vélo, on mange avant d'avoir faim",
+      "teaser": "Au-delà de 90 minutes : 60 à 90 g de glucides par heure, dès le début.",
+      "body": "La fringale arrive quand il est trop tard. Sur une sortie longue :\n\n- **Dès la première demi-heure**, et toutes les 20 à 30 minutes : barre, gel, pâte de fruits, banane, boisson énergétique.\n- **60 g par heure** jusqu'à 2 h 30, **jusqu'à 90 g** au-delà, en mélangeant glucose et fructose.\n- **Boire** 500 à 750 ml par heure, plus par la chaleur, avec du sel au-delà de 2 h.\n\nEntraîne-toi à manger en roulant : c'est une compétence comme une autre.",
+      "sports": ["ride"],
+      "when": { "longTomorrow": true },
+      "priority": 2,
+      "source": { "label": "Sports Medicine, 2014", "url": "https://pubmed.ncbi.nlm.nih.gov/24791914/" }
+    },
+    {
+      "id": "muscu-progression",
+      "title": "Ton journal, c'est ta progression",
+      "teaser": "Ajouter une répétition, puis un kilo : la recette qui marche, semaine après semaine.",
+      "body": "En musculation, on progresse en faisant un tout petit peu plus que la dernière fois : une répétition de plus sur une série, puis un peu de charge quand le haut de la plage est atteint. C'est pour ça que l'app garde tes séries, et te propose la charge suivante.\n\n**Garde les mêmes noms d'exercices** d'une semaine à l'autre, et note ton ressenti sur les séries : « facile », « juste », « dur ». C'est ce qui permet de calculer la suite.\n\n**Une stagnation de trois semaines** sur un exercice ? Une semaine allégée, ou une variante pendant un cycle, relance souvent la machine.",
+      "sports": ["strength"],
+      "when": { "manual": true },
+      "priority": 2
+    },
+    {
+      "id": "muscu-volume",
+      "title": "Combien de séries par semaine ?",
+      "teaser": "Dix séries dures par muscle et par semaine, c'est déjà beaucoup de progrès.",
+      "body": "La masse musculaire augmente avec le nombre de séries « dures » (proches de l'échec) par muscle et par semaine, avec des rendements décroissants : **10 à 20 séries** par groupe musculaire couvrent l'essentiel.\n\n- **La fréquence** compte peu à volume égal : deux passages par muscle et par semaine sont un bon défaut.\n- **Pour la force**, c'est la charge lourde qui compte, pas le volume.\n- **Près de l'échec, pas à l'échec partout** : une à trois répétitions en réserve sur les gros exercices.",
+      "sports": ["strength"],
+      "when": {},
+      "priority": 1,
+      "source": { "label": "SportRxiv, 2024 (prépublication)", "url": "https://sportrxiv.org/index.php/server/preprint/view/460" }
+    },
+    {
+      "id": "sommeil",
+      "title": "Le sommeil, ton meilleur complément",
+      "teaser": "C'est la nuit que l'entraînement devient de la forme.",
+      "body": "Aucun complément ne fait autant que le sommeil pour la récupération, l'humeur et la régularité.\n\n- **Vise 7 à 9 heures**, à heures régulières, même le week-end.\n- **Une séance dure tard le soir** peut retarder l'endormissement : si c'est ton cas, décale-la, ou finis par 10 minutes très calmes.\n- **Une semaine de mauvaises nuits** ? Dis-le au coach : il allège plutôt que de te faire courir fatigué.",
+      "sports": ["any"],
+      "when": {},
+      "priority": 1
+    },
+    {
+      "id": "douleur-ou-courbature",
+      "title": "Courbature ou douleur ?",
+      "teaser": "Savoir faire la différence évite la plupart des blessures.",
+      "body": "- **Une courbature** est diffuse, des deux côtés, pire le lendemain et le surlendemain, et s'atténue en s'échauffant. On peut courir facile.\n- **Une douleur** est localisée, souvent d'un seul côté, augmente pendant l'effort, ou modifie ta foulée. On s'arrête.\n\nDeux jours de suite de douleur : repos, et dis-le au coach. Si elle dure, un professionnel de santé. La plupart des blessures de coureur viennent d'une seule sortie trop longue par rapport à d'habitude : c'est pour ça que l'app plafonne la sortie longue.",
+      "sports": ["run", "hyrox"],
+      "when": {},
+      "priority": 1,
+      "source": { "label": "British Journal of Sports Medicine, 2025", "url": "https://pure.au.dk/portal/en/publications/how-much-running-is-too-much-identifying-high-risk-running-sessio/" }
+    }
+  ]
+}

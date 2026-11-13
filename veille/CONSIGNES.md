@@ -47,7 +47,35 @@ réplication, une étude animale, un résultat sans conséquence pratique, un su
 - Français, tutoiement inutile, pas d'emoji, pas de superlatif.
 - `updatedAt` (AAAA-MM-JJ) en tête du fichier passe à la date du jour.
 
-## Avant d'ouvrir la demande de fusion
-`node veille/valider.mjs` doit répondre « ok ». La demande de fusion s'intitule
-`docs(veille): mise à jour de <mois année>` et liste, pour chaque entrée ajoutée, modifiée ou
-retirée, la raison en une ligne et le lien lu.
+## Les conseils (`conseils.json`)
+De courts articles (une minute de lecture) que l'app montre au bon moment de la préparation. Chaque mois :
+corriger un conseil qu'une publication retenue contredit ; en ajouter 1 ou 2 au plus s'il manque un moment.
+
+```json
+{
+  "id": "veille-de-course",            // unique, stable
+  "title": "La veille de ta course",   // 90 caractères au plus
+  "teaser": "Une phrase qui donne envie de lire.",            // 200 au plus
+  "body": "Le texte en Markdown simple : paragraphes, listes « - », **gras**.", // 2400 au plus
+  "sports": ["run", "hyrox"],          // run, ride, strength, swim, hyrox, any
+  "when": {                            // toutes les conditions données doivent être vraies
+    "daysToRace": [1, 1],              // jours avant la prochaine épreuve
+    "daysAfterRace": [0, 6],           // jours après la dernière épreuve
+    "raceKm": [18, 400],               // distance de l'épreuve
+    "stage": ["specifique"],           // base, construction, specifique, affutage
+    "longTomorrow": true,              // séance de 90 min ou plus demain
+    "planWeek": [1, 2],                // semaines depuis le début du plan
+    "manual": true                     // mode journal de musculation
+  },
+  "priority": 3,                       // 1 bonus, 2 utile, 3 à ne pas manquer
+  "source": { "label": "Revue, année", "url": "https://…" }   // facultatif
+}
+```
+Tutoiement, phrases courtes, des chiffres concrets, rien de médical. Un conseil sans « when » est un
+article à lire quand on veut, jamais mis en avant.
+
+## Avant de fusionner
+`node veille/valider.mjs` doit répondre « ok » (deux lignes : veille et conseils). La demande de
+fusion s'intitule `docs(veille): mise à jour de <mois année>` et liste, pour chaque entrée ajoutée,
+modifiée ou retirée, la raison en une ligne et le lien lu. Elle est fusionnée aussitôt (squash) :
+la mise à jour est automatique.

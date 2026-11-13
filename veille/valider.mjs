@@ -28,3 +28,37 @@ if (errors.length) {
   process.exit(1);
 }
 console.log(`ok — ${w.items.length} entrées, mise à jour du ${w.updatedAt}`);
+
+// --- conseils.json (US 64) : mêmes règles que app/src/lib/tips.ts -------------------------
+const c = JSON.parse(fs.readFileSync(new URL('./conseils.json', import.meta.url), 'utf8'));
+const cerr = [];
+const SPORTS = ['run', 'ride', 'strength', 'swim', 'hyrox', 'any'];
+const STAGES = ['base', 'construction', 'specifique', 'affutage'];
+const RANGES = { daysToRace: [0, 365], daysAfterRace: [0, 120], raceKm: [0, 400], planWeek: [1, 60] };
+if (c.version !== 1) cerr.push('conseils : version doit valoir 1');
+if (!/^\d{4}-\d{2}-\d{2}$/.test(String(c.updatedAt))) cerr.push('conseils : updatedAt AAAA-MM-JJ attendu');
+const cseen = new Set();
+(c.tips ?? []).forEach((t, i) => {
+  const at = `tips[${i}] (${t?.id ?? '?'})`;
+  if (!len(t.id, 60) || cseen.has(t.id)) cerr.push(`${at} : id manquant, trop long ou en double`);
+  cseen.add(t.id);
+  if (!len(t.title, 90)) cerr.push(`${at} : title 1 à 90 caractères`);
+  if (!len(t.teaser, 200)) cerr.push(`${at} : teaser 1 à 200 caractères`);
+  if (!len(t.body, 2400)) cerr.push(`${at} : body 1 à 2400 caractères (${String(t.body ?? '').length})`);
+  if (!Array.isArray(t.sports) || !t.sports.length || t.sports.some((s) => !SPORTS.includes(s))) cerr.push(`${at} : sports parmi ${SPORTS.join(', ')}`);
+  if (![1, 2, 3].includes(t.priority)) cerr.push(`${at} : priority 1, 2 ou 3`);
+  const w = t.when ?? {};
+  for (const [k, [lo, hi]] of Object.entries(RANGES)) {
+    if (w[k] == null) continue;
+    const r = w[k];
+    if (!Array.isArray(r) || r.length !== 2 || r[0] > r[1] || r[0] < lo || r[1] > hi) cerr.push(`${at} : when.${k} = [min, max] entre ${lo} et ${hi}`);
+  }
+  if (w.stage != null && (!Array.isArray(w.stage) || w.stage.some((s) => !STAGES.includes(s)))) cerr.push(`${at} : when.stage parmi ${STAGES.join(', ')}`);
+  if (t.source && (!len(t.source.label, 120) || !/^https:\/\//.test(String(t.source.url)))) cerr.push(`${at} : source { label, url https }`);
+});
+if ((c.tips ?? []).length > 120) cerr.push('conseils : plus de 120');
+if (cerr.length) {
+  console.error(cerr.join('\n'));
+  process.exit(1);
+}
+console.log(`ok — ${c.tips.length} conseils`);
