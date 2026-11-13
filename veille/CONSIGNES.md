@@ -3,7 +3,7 @@
 `veille.json` est lu par l'app Coacher de tous les athlètes : ce que la recherche récente
 ajoute aux principes du coach (course à pied, vélo, musculation, natation, Hyrox, nutrition,
 récupération). Il est mis à jour une fois par mois par une tâche planifiée, par une demande de
-fusion relue par Benjamin. Rien d'autre ne lit ni n'écrit ce fichier.
+fusion qu'elle fusionne elle-même. `conseils.json` (même dossier) porte les conseils du moment.
 
 ## Ce qu'on cherche
 Des publications des 12 derniers mois (ou une référence plus ancienne qui manque encore) qui
